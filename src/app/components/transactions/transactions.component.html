@@ -1,1 +1,6 @@
-<p>transactions works!</p>
+<app-transaction 
+    *ngFor="let transaction of transactions" 
+    [transaction]="transaction" 
+    (remove)="deleteTransactionById(this.transaction.id)">
+</app-transaction>
+
