@@ -8,7 +8,7 @@ import { Transaction } from 'src/Data/transaction';
 })
 export class TransactionsComponent {
   public transactions: Transaction[] = [
-    new Transaction(0, 25, new Date, 'Walgreens', 'Misc'),
+    new Transaction(0, 25, new Date, 'Walgreens', ''),
     new Transaction(1, 40, new Date, 'Hennepin Electric', 'Utilities')
 
   ]
@@ -23,5 +23,9 @@ ngOnInit(): void {
     console.log('deleteMemoById ' + id)
     const index = this.transactions.findIndex(transaction => transaction.id === id)
     this.transactions.splice(index, 1)
+  }
+
+  addTransaction(transaction: Transaction): void {
+    this.transactions.push(transaction)
   }
 }

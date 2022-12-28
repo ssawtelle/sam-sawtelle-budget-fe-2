@@ -1,0 +1,16 @@
+<h4>New Transaction:</h4>
+
+ID:
+    <input type='text' #id (keyup)="updateId(id.valueAsNumber)"/>
+Charge:
+    <input type='text' #charge (keyup)="updateCharge(charge.valueAsNumber)"/>
+Destination: 
+    <input type='text' #destination (keyup)="updateDestination(destination.value)"/>
+<!-- Date: -->
+    <!-- <input type="date" #date (keyup)="updateDate(date.valueAsDate)"/> -->
+Budget:
+    <input type='text' #budget (keyup)="updateBudget(budget.value)"/>
+<br>
+<button (click)="onSubmit()">Submit</button>
+
+
